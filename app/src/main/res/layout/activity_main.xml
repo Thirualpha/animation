@@ -88,3 +88,88 @@ app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toTopOf="parent" 
 app:layout_constraintVertical_bias="0.91" /> 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+zoom.xml:
+
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"> 
+<scale xmlns:android="http://schemas.android.com/apk/res/android" 
+android:fromXScale="0.5" android:toXScale="3.0" 
+android:fromYScale="0.5" android:toYScale="3.0" 
+android:duration="1000" android:pivotX="25%" 
+android:pivotY="25%" >
+ </scale>
+ <scale xmlns:android="http://schemas.android.com/apk/res/android" 
+android:startOffset="1000" android:fromXScale="3.0" 
+android:toXScale="0.5" android:fromYScale="3.0" 
+android:toYScale="0.5" android:duration="1000" 
+android:pivotX="25%" android:pivotY="25%" >
+ </scale>
+</set>
+
+slide.xml:
+
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+ <scale android:duration="500" 
+android:fromXScale="1.0" android:fromYScale="1.0" 
+android:interpolator="@android:anim/linear_interpolator" 
+android:toXScale="1.0"
+android:toYScale="0.0" />
+</set>
+
+move.xml:
+
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+ <translate 
+android:fromXDelta="0%p" 
+android:toXDelta="75%p" 
+android:duration="700" />
+</set>
+
+fade.xml:
+
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+ <!-- duration is the time for which animation will work-->
+ <alpha 
+android:duration="1000" 
+android:fromAlpha="0" 
+android:toAlpha="1" />
+ <alpha 
+android:duration="1000" 
+android:fromAlpha="1" 
+android:startOffset="2000" 
+android:toAlpha="0" />
+</set>
+
+rotate.xml:
+
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+ <rotate 
+android:duration="6000" 
+android:fromDegrees="0" 
+android:pivotX="50%" 
+android:pivotY="50%" 
+android:toDegrees="360" />
+ <rotate 
+android:duration="6000" 
+android:fromDegrees="360" 
+android:pivotX="50%" 
+android:pivotY="50%"
+android:startOffset="5000"
+ android:toDegrees="0" />
+</set>
+
+blink.xml:
+
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+ <alpha android:fromAlpha="0.0" android:toAlpha="1.0" 
+android:interpolator="@android:anim/accelerate_interpolator" 
+android:duration="500" android:repeatMode="reverse" 
+android:repeatCount="infinite"/>
+</set>
